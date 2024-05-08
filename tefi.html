@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expressão de Amor</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Adicionando um layout de coluna para empilhar os elementos verticalmente */
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+  }
+  
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .heart {
+    position: relative;
+    width: 200px; /* Ajustando o tamanho do coração */
+    height: 180px; /* Ajustando o tamanho do coração */
+    margin: 20px;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px; /* Ajustando o tamanho do coração */
+    height: 160px; /* Ajustando o tamanho do coração */
+    background-color: #ff4d4d;
+    border-radius: 100px 100px 0 0; /* Ajustando a forma do coração */
+  }
+  
+  .heart::before {
+    left: 100px; /* Ajustando a posição do coração */
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Colocando o texto sobre o coração */
+  }
+</style>
+</head>
+<body>
+
+<h1>De Bitu para Tefi</h1>
+
+<div class="heart">
+  <div class="text">Eu te amo e sou muito feliz com você</div>
+</div>
+
+</body>
+</html>
